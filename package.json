@@ -15,7 +15,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/server.js"
+    "dev": "node src/server.js",
+    "format:fix": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
