@@ -1,5 +1,5 @@
 function restart(server: string) {
-  console.log(`Server ${server} restarted!`);
+    console.log('Server restarted!', server)
 }
 
-restart("Express");
+restart('Express')
