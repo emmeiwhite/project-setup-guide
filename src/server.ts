@@ -4,7 +4,7 @@ function restart(server: string) {
 
 restart('Express')
 
-let totalSavings = 4000
+const totalSavings = 4000
 function addMoney(deposit: number) {
     return totalSavings + deposit
 }

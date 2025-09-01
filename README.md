@@ -57,3 +57,25 @@
 `ESLint` enforces best practices and helps avoid bugs. It statically analyses code to quickly find problems
 
 Follow the docs as docs keeps updating.
+
+- Install the required packages `npm install --save-dev eslint @eslint/js typescript typescript-eslint`
+
+- Next, create an `eslint.config.mjs` config file in the root of your project
+
+```ts
+// @ts-check
+
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
+
+export default tseslint.config(
+    eslint.configs.recommended,
+    tseslint.configs.recommended,
+    {
+        ignores: ['dist', 'node_modules'],
+    },
+)
+```
+
+- To run eslint write the command `npx eslint .`
+-
