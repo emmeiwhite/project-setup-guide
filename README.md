@@ -78,4 +78,21 @@ export default tseslint.config(
 ```
 
 - To run eslint write the command `npx eslint .`
--
+- Update the `eslintconfig.mjs` for linting with type information
+
+```ts
+// @ts-check
+
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
+
+export default tseslint.config(eslint.configs.recommended, {
+    ignores: ['dist', 'node_modules'],
+    languageOptions: {
+        parserOptions: {
+            projectService: true,
+            tsconfigRootDir: import.meta.dirname,
+        },
+    },
+})
+```
