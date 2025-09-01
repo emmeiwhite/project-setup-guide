@@ -51,3 +51,9 @@
       ```
 
     - The prettier that we installed in the project will be used to format our `CI` pipeline in `github hook`s & the prettier extension will format code locally in our VSCode.
+
+[**ESLint setup for typescript-eslint:** ](https://typescript-eslint.io/getting-started/#step-1-installation)
+
+`ESLint` enforces best practices and helps avoid bugs. It statically analyses code to quickly find problems
+
+Follow the docs as docs keeps updating.
