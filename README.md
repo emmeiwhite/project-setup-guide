@@ -38,4 +38,16 @@
 
       ````
 
-    -
+    - Also install the `prettier extension` and also add settings for formatting int he `.prettierrc` file:
+    - ```js
+          {
+            "singleQuote": true,
+
+            "semi": false,
+
+            "tabWidth": 4
+
+            }
+      ```
+
+    - The prettier that we installed in the project will be used to format our `CI` pipeline in `github hook`s & the prettier extension will format code locally in our VSCode.
