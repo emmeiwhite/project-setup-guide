@@ -2,6 +2,7 @@
     "name": "dsa-so-it-begins",
     "version": "1.0.0",
     "description": "",
+    "type":"module",
     "homepage": "https://github.com/emmeiwhite/algos-dataStructures#readme",
     "bugs": {
         "url": "https://github.com/emmeiwhite/algos-dataStructures/issues"
@@ -12,7 +13,6 @@
     },
     "license": "ISC",
     "author": "",
-    "type": "commonjs",
     "main": "index.js",
     "scripts": {
         "dev": "node src/server.js",
@@ -37,5 +37,8 @@
             "npm run format:fix",
             "npm run lint:fix"
         ]
+    },
+    "dependencies": {
+        "dotenv": "^17.2.1"
     }
 }
