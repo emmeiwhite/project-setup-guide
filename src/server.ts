@@ -5,6 +5,7 @@ function restart(server: string) {
 restart('Express')
 
 const totalSavings = 4000
+
 function addMoney(deposit: number) {
     return totalSavings + deposit
 }
