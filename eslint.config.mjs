@@ -1,24 +1,27 @@
+// @ts-check
+
 import eslint from '@eslint/js'
+import { defineConfig } from 'eslint/config'
 import tseslint from 'typescript-eslint'
-import path from 'path'
-import { fileURLToPath } from 'url'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
-export default tseslint.config(
+export default defineConfig(
     eslint.configs.recommended,
-    tseslint.configs.recommendedTypeChecked,
+    ...tseslint.configs.recommendedTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
     {
-        files: ['**/*.ts'], // 👈 ensure TypeScript files are included
-        ignores: ['dist', 'node_modules'],
+        ignores: ['dist', 'node_modules', 'eslint.config.mjs'],
+    },
+    {
         languageOptions: {
             parserOptions: {
-                project: './tsconfig.eslint.json',
-                tsconfigRootDir: __dirname,
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
             },
         },
+
         rules: {
-            'no-console': 'off',
+            // 'no-console': 'error',
+            'dot-notation': 'error',
         },
     },
 )

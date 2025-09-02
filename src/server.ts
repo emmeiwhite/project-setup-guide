@@ -15,4 +15,4 @@ const person = {
     name: 'Rafia',
 }
 
-console.log(person['name'])
+person.name
