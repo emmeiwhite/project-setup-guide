@@ -10,3 +10,9 @@ function addMoney(deposit: number) {
 }
 
 addMoney(50000)
+
+const person = {
+    name: 'Rafia',
+}
+
+console.log(person['name'])

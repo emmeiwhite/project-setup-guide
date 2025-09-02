@@ -18,8 +18,8 @@
         "dev": "node src/server.js",
         "format:fix": "prettier . --write",
         "format:check": "prettier . --check",
-        "link:check": "eslint .",
-        "link:fix": "eslint . --fix"
+        "lint:check": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     "devDependencies": {
         "@eslint/js": "^9.34.0",
