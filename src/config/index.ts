@@ -1,8 +1,8 @@
 import { config } from 'dotenv'
 config()
 
-const { PORT } = process.env // Currently we are getting the environmental variables from the .env file, but perhaps in other projects we may be getting them from other files, that's why we create a separate config file so that the transition is smooth
+const PORT = process.env.PORT ?? '3000' // fallback to default if undefined
 
-export const Config = {
-    PORT,
+export const Config: { PORT: number } = {
+    PORT: Number(PORT),
 }

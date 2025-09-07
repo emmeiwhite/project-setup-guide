@@ -13,7 +13,7 @@
     "license": "ISC",
     "author": "",
     "main": "index.js",
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
         "dev": "node src/server.js",
         "format:fix": "prettier . --write",
