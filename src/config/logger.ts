@@ -4,6 +4,12 @@ const logger = winston.createLogger({
     level: 'info',
     defaultMeta: {
         serviceName: 'auth-service',
+        transports: [
+            new winston.transports.Console({
+                level: 'info',
+                format: winston.format.json(),
+            }),
+        ],
     },
 })
 
