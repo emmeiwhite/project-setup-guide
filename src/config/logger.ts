@@ -1,4 +1,5 @@
 import winston from 'winston'
+import { Config } from '.'
 
 const logger = winston.createLogger({
     level: 'info',
@@ -14,7 +15,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
-            silent: false,
+            silent: Config.NODE_ENV === 'test',
         }),
         new winston.transports.File({
             level: 'error',
@@ -24,7 +25,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
-            silent: false, // by default - which means do not silent the logs or in other words log
+            silent: Config.NODE_ENV === 'test', // by default - which means do not silent the logs or in other words log
         }),
         new winston.transports.Console({
             level: 'info',
@@ -32,7 +33,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
-            silent: true,
+            silent: Config.NODE_ENV === 'test',
         }),
     ],
 })
