@@ -14,6 +14,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
+            silent: false,
         }),
         new winston.transports.File({
             level: 'error',
@@ -23,6 +24,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
+            silent: false, // by default - which means do not silent the logs or in other words log
         }),
         new winston.transports.Console({
             level: 'info',
@@ -30,6 +32,7 @@ const logger = winston.createLogger({
                 winston.format.timestamp(),
                 winston.format.json(),
             ),
+            silent: true,
         }),
     ],
 })
